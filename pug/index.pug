@@ -1,0 +1,204 @@
+extends layout/_layout.pug
+//-=====================================
+
+
+block head
+	- var title = 'title'
+	include layout/_head.pug
+	//- include layout/_seo.html
+	link( rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css") 
+//--------------------------------------
+
+block content
+	.menu-bg#menu 
+	.menu-content.py.pl.pr-3.bg-white
+		p.bold NOTUS VUE
+		p.menu-heading admin layout pages 
+		a(href="#").menu-link.active <i class="menu-icon fas fa-desktop"></i> dashboard		 	
+		a(href="#").menu-link <i class="menu-icon fas fa-wrench"></i> settings		 	
+		a(href="#").menu-link <i class="menu-icon fas fa-table"></i> tables		 	
+		p.menu-heading AUTH LAYOUT PAGES
+		a(href="#").menu-link <i class="menu-icon fas fa-fingerprint"></i> login		 	
+		a(href="#").menu-link <i class="menu-icon fas fa-receipt"></i> register 
+		p.menu-heading NO LAYOUT PAGES 
+		a(href="#").menu-link <i class="menu-icon fas fa-pager"></i> landing page		 	
+		a(href="#").menu-link <i class="menu-icon fas fa-address-book menu-icon"></i> profile page		 	
+		//- p.menu-heading admin layout pages 
+		//- a(href="#").menu-link <i class="fas fa-address-book menu-icon"></i> home		 	
+		//- a(href="#").menu-link <i class="fas fa-address-book menu-icon"></i> home		 	
+		//- a(href="#").menu-link <i class="fas fa-address-book menu-icon"></i> home		 	
+	//-------------------------------------
+	.content-wrapper
+		.content-heading.bg-primary.px-2.py 
+			.flex.mb-2.ai-center
+				btn.t-light.show-menu <i class="fas fa-bars"></i> dashboard 
+				.input-group
+					//- input(type="text").input-control.round-left-1.input
+					//- i(class="fas fa-search").box-2.bg-green-t.round-right-1
+					i(class="fas fa-search").box-2.bg-light.t-gray.round-left-1
+					input(type="text").input-control.round-right-1
+					.box-2.bg-green-t.round-circle.ml.img-container
+						img(src="https://demos.creative-tim.com/notus-react/static/media/team-4-470x470.4ef82ef4.png", alt="")
+					
+			.flex.gap 	
+				.bg-white.stats.shadow-bottom-sm
+					.flex-auto.t-small 
+						p.bold.t-gray trafic
+						p.bold.t-normal.mb 350,99
+						p 
+							span.t-green.bold.mr &#708;  3,45%
+							span.t-gray Since last month
+					.stats-icon.box-3.bg-red.round-circle <i class="fas fa-address-book t-light"></i>	
+				.bg-white.stats.shadow-bottom-sm
+					.flex-auto.t-small 
+						p.bold.t-gray trafic
+						p.bold.t-normal.mb 350,99
+						p 
+							span.t-green.bold.mr &#708;  3,45%
+							span.t-gray Since last month
+					.stats-icon.box-3.bg-red.round-circle <i class="fas fa-address-book t-light"></i>	
+				.bg-white.stats.shadow-bottom-sm
+					.flex-auto.t-small 
+						p.bold.t-gray trafic
+						p.bold.t-normal.mb 350,99
+						p 
+							span.t-green.bold.mr &#708;  3,45%
+							span.t-gray Since last month
+					.stats-icon.box-3.bg-red.round-circle <i class="fas fa-address-book t-light"></i>	
+				.bg-white.stats.shadow-bottom-sm
+					.flex-auto.t-small 
+						p.bold.t-gray trafic
+						p.bold.t-normal.mb 350,99
+						p 
+							span.t-green.bold.mr &#708;  3,45%
+							span.t-gray Since last month
+					.stats-icon.box-3.bg-red.round-circle <i class="fas fa-address-book t-light"></i>	
+		//-----------------------------
+		div.content-main
+			.content-section-7.bg-secondary.t-light  
+				canvas( id="myChart")
+
+
+			//- .content-section-3.bg-blue.t-light  
+			//- 	.ratio-1-1.bg-yellow.img-container.round-circle
+			//- 		img(src="https://www.tuexperto.com/wp-content/uploads/2015/07/perfil_01.jpg", alt="")
+
+				p.bg-info otro
+			
+
+			.content-section-5.t-center.t-small.content-profile.bg-light
+				img(src="https://www.tuexperto.com/wp-content/uploads/2015/07/perfil_01.jpg", alt="").round-circle.w-150-max.h-150.content-profile-img
+				.flex.my
+					.flex-4 
+						p.bold.t-normal 22
+						p.t-gray friends
+					.flex-4 
+						p.bold.t-normal 22
+						p.t-gray friends
+					.flex-4 
+						p.bold.t-normal 22
+						p.t-gray friends
+				p.bold.t-big Stephan Bautista 
+				p.t-gray.bold.mb-2 <i class="fas fa-address-book t-light"></i> LOS ANGELES, CALIFORNIA
+				p <i class="fas fa-address-book t-light"></i> LOS ANGELES, CALIFORNIA
+				a(href="#").btn.a show more ... 
+
+			.content-section-7.t-small
+				.flex
+					p.bold.t-3 My account 
+					button.bg-cyan.round-1.t-light.px settings
+				p.t-gray.bold USER INFORMATION 
+				.flex.gap.p
+					.flex-6.mb
+						label(for="").mb.bold username
+						input.input(type="text" value="lucky.jesse").shadow-bottom-sm.p
+					.flex-6.mb
+						label(for="").mb.bold username
+						input.input(type="text" value="lucky.jesse").shadow-bottom-sm.p
+					.flex-6.mb
+						label(for="").mb.bold username
+						input.input(type="text" value="lucky.jesse").shadow-bottom-sm.p
+					.flex-6.mb
+						label(for="").mb.bold username
+						input.input(type="text" value="lucky.jesse").shadow-bottom-sm.p
+				hr
+				p.t-gray.bold USER INFORMATION 
+				.flex.gap.p
+					.flex-6.mb
+						label(for="").mb.bold username
+						input.input(type="text" value="lucky.jesse").shadow-bottom-sm.p
+					.flex-6.mb
+						label(for="").mb.bold username
+						input.input(type="text" value="lucky.jesse").shadow-bottom-sm.p
+					.flex-6.mb
+						label(for="").mb.bold username
+						input.input(type="text" value="lucky.jesse").shadow-bottom-sm.p
+					.flex-6.mb
+						label(for="").mb.bold username
+						input.input(type="text" value="lucky.jesse").shadow-bottom-sm.p
+			//- button.py-2.bg-red-t show menu
+			.content-section.bg-secondary-t
+				.flex 
+					p.bold page visits 
+					button.btn-sm.bg-purple.round-1 see all
+				table.t-small
+					tr.t-gray
+						td PROJECT
+						td BUDGET
+						td STATUS						   
+						td USERS						   
+						td COMPLETION						   
+					tr
+						td
+							img(src="https://demos.creative-tim.com/notus-react/static/media/team-4-470x470.4ef82ef4.png", alt="").box-2.bg-white.mr
+							| Argon Design System
+						td $2,500 USD
+						td
+							.flex.ai-center.w-fit-content
+								.box-1.bg-yellow.d-inline-block.mr.round-circle
+								| pending
+						td 
+							img(src="https://demos.creative-tim.com/notus-react/static/media/team-4-470x470.4ef82ef4.png", alt="").table-img
+							img(src="https://demos.creative-tim.com/notus-react/static/media/team-4-470x470.4ef82ef4.png", alt="").table-img
+							img(src="https://demos.creative-tim.com/notus-react/static/media/team-4-470x470.4ef82ef4.png", alt="").table-img
+						td 60%				   
+					tr
+						td
+							img(src="https://demos.creative-tim.com/notus-react/static/media/team-4-470x470.4ef82ef4.png", alt="").box-2.bg-white.mr
+							| Argon Design System
+						td $2,500 USD
+						td
+							.flex.ai-center.w-fit-content
+								.box-1.bg-yellow.d-inline-block.mr.round-circle
+								| pending
+						td 
+							img(src="https://demos.creative-tim.com/notus-react/static/media/team-4-470x470.4ef82ef4.png", alt="").table-img
+							img(src="https://demos.creative-tim.com/notus-react/static/media/team-4-470x470.4ef82ef4.png", alt="").table-img
+							img(src="https://demos.creative-tim.com/notus-react/static/media/team-4-470x470.4ef82ef4.png", alt="").table-img
+						td 60%				   
+					tr
+						td
+							img(src="https://demos.creative-tim.com/notus-react/static/media/team-4-470x470.4ef82ef4.png", alt="").box-2.bg-white.mr
+							| Argon Design System
+						td $2,500 USD
+						td
+							.flex.ai-center.w-fit-content
+								.box-1.bg-yellow.d-inline-block.mr.round-circle
+								| pending
+						td 
+							img(src="https://demos.creative-tim.com/notus-react/static/media/team-4-470x470.4ef82ef4.png", alt="").table-img
+							img(src="https://demos.creative-tim.com/notus-react/static/media/team-4-470x470.4ef82ef4.png", alt="").table-img
+							img(src="https://demos.creative-tim.com/notus-react/static/media/team-4-470x470.4ef82ef4.png", alt="").table-img
+						td 60%				   
+					
+	.bottom-anim
+
+//--------------------------------------
+block foot
+	
+
+//--------------------------------------
+block scripts
+	script(src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/3.4.0/chart.min.js")
+
+	script(src="../js/app.js")
